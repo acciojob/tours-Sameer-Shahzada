@@ -10,3 +10,8 @@ button{
     justify-content: center;
     align-items: center;
 }
+
+.tour-card {
+    padding:10px;
+    
+}
