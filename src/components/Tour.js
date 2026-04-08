@@ -6,21 +6,26 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
 
   return (
     <div className="tour-card">
+
       <img src={image} alt={name} />
 
       <h3>{name}</h3>
       <h4>${price}</h4>
 
-      <p>
+      <p id={`tour-item-para-${id}`}>
         {readMore ? info : `${info.substring(0, 200)}...`}
         <button onClick={() => setReadMore(!readMore)}>
           {readMore ? "See Less" : "Show More"}
         </button>
       </p>
 
-      <button onClick={() => removeTour(id)}>
+      <button
+        id={`delete-btn-${id}`}
+        onClick={() => removeTour(id)}
+      >
         Remove
       </button>
+
     </div>
   );
 };
